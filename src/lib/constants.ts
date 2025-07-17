@@ -32,12 +32,14 @@ export const PRODUCT_DATA: Product = {
 export const NAVIGATION_ITEMS: NavItem[] = [
   { label: 'Home', href: '/' },
   { label: 'Shop', href: '/shop' },
+  { label: 'Blog', href: '/blog' },
   { label: 'About', href: '/about' },
   { label: 'FAQ', href: '/faq' }
 ]
 
 export const FOOTER_LINKS: NavItem[] = [
   { label: 'About Brush Club', href: '/about' },
+  { label: 'Blog', href: '/blog' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Privacy Policy', href: '/privacy' },
   { label: 'Contact', href: '/contact' }

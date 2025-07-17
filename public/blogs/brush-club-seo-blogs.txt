@@ -10,7 +10,7 @@ BLOG POST #1
 Title: The Complete Guide to PFAS-Free Oral Care: Why Your Toothpaste Matters
 Slug: pfas-free-oral-care-guide-safe-toothpaste
 Publish Date: January 15, 2024
-Image Prompt: Clean white bathroom counter with bamboo toothbrush and natural toothpaste tube, minimalist aesthetic
+Image Path: /blog_images/the-complete-guide-to-pfas-free-oral-care-why-your-toothpaste-matters.png
 Tags: PFAS-free, oral care, sustainable dental health, chemical-free toothpaste, eco-friendly oral hygiene, health safety, toxin-free products, sustainable living, dental wellness, clean beauty
 
 Meta Description: Discover why PFAS-free oral care products matter for your health and the environment. Learn to identify safer alternatives for daily dental hygiene.
@@ -65,7 +65,7 @@ BLOG POST #2
 Title: Bamboo vs Plastic Toothbrushes: Environmental Impact Analysis 2024
 Slug: bamboo-plastic-toothbrush-environmental-impact-2024
 Publish Date: January 22, 2024
-Image Prompt: Side-by-side comparison of bamboo and plastic toothbrushes on natural wood surface with green plants
+Image Path: /blog_images/bamboo-vs-plastic-toothbrushes-environmental-impact-analysis-2024.png
 Tags: bamboo toothbrush, plastic waste, environmental impact, sustainable dental care, zero waste, eco-friendly oral hygiene, plastic pollution, biodegradable products, carbon footprint, ocean plastic
 
 Meta Description: Compare the environmental impact of bamboo vs plastic toothbrushes. Discover why making the switch could reduce your carbon footprint by 90%.
@@ -136,7 +136,7 @@ BLOG POST #3
 Title: Zero Waste Oral Care Routine: Complete Guide for Beginners
 Slug: zero-waste-oral-care-routine-beginners-guide
 Publish Date: January 29, 2024
-Image Prompt: Minimalist bathroom setup with zero waste oral care products arranged on clean white marble counter
+Image Path: /blog_images/zero-waste-oral-care-routine-complete-guide-for-beginners.png
 Tags: zero waste, sustainable oral care, plastic-free dental hygiene, eco-friendly routine, waste reduction, sustainable living, green lifestyle, environmental consciousness, minimalist oral care, package-free products
 
 Meta Description: Create a zero waste oral care routine with this complete beginner's guide. Reduce bathroom waste by 95% while maintaining excellent dental health.
@@ -240,7 +240,7 @@ BLOG POST #4
 Title: Corn Fiber Floss vs Traditional Dental Floss: Complete Comparison Guide
 Slug: corn-fiber-floss-vs-traditional-dental-floss-comparison
 Publish Date: February 5, 2024
-Image Prompt: Close-up hands holding corn fiber floss next to traditional plastic floss container on natural wooden background
+Image Path: /blog_images/corn-fiber-floss-vs-traditional-dental-floss-complete-comparison-guide.png
 Tags: corn fiber floss, sustainable dental floss, eco-friendly floss, biodegradable floss, plastic-free dental care, natural floss alternatives, sustainable oral hygiene, zero waste floss, environmental dental products, green oral care
 
 Meta Description: Discover why corn fiber floss outperforms traditional plastic floss for both dental health and environmental impact. Complete comparison guide 2024.
@@ -331,7 +331,7 @@ BLOG POST #5
 Title: How to Reduce Your Bathroom's Plastic Waste by 90% in 30 Days
 Slug: reduce-bathroom-plastic-waste-90-percent-30-days
 Publish Date: February 12, 2024
-Image Prompt: Before and after bathroom counter showing plastic products replaced with sustainable alternatives in clean modern bathroom
+Image Path: /blog_images/how-to-reduce-your-bathrooms-plastic-waste-by-90-in-30-days.png
 Tags: plastic waste reduction, sustainable bathroom, zero waste bathroom, plastic-free living, eco-friendly bathroom products, waste reduction challenge, sustainable swaps, environmental living, green bathroom, plastic pollution
 
 Meta Description: Transform your bathroom into a plastic-free zone with this 30-day challenge. Reduce waste by 90% with simple, effective sustainable swaps.
@@ -442,7 +442,7 @@ BLOG POST #6
 Title: Microplastics in Your Mouth: Hidden Dangers of Conventional Oral Care
 Slug: microplastics-mouth-dangers-conventional-oral-care
 Publish Date: February 19, 2024
-Image Prompt: Microscopic view illustration of microplastics particles with oral care products in background, scientific aesthetic
+Image Path: /blog_images/microplastics-in-your-mouth-hidden-dangers-of-conventional-oral-care.png
 Tags: microplastics, oral health, plastic pollution, health risks, dental safety, environmental health, sustainable oral care, plastic-free dental products, health awareness, toxin exposure
 
 Meta Description: Discover how conventional oral care products expose you to harmful microplastics daily. Learn safer alternatives for plastic-free dental hygiene.
@@ -548,7 +548,7 @@ BLOG POST #7
 Title: The Environmental Cost of Single-Use Oral Care Products
 Slug: environmental-cost-single-use-oral-care-products
 Publish Date: February 26, 2024
-Image Prompt: Landfill with scattered plastic oral care products among other waste, aerial view showing scale of waste
+Image Path: /blog_images/the-environmental-cost-of-single-use-oral-care-products.png
 Tags: single-use products, environmental impact, oral care waste, plastic pollution, sustainable dentistry, disposable products, environmental cost, waste reduction, sustainable alternatives, eco-consciousness
 
 Meta Description: Discover the shocking environmental cost of single-use oral care products and learn sustainable alternatives that reduce waste by 95%.
@@ -670,7 +670,7 @@ BLOG POST #8
 Title: Natural Teeth Whitening: Safe Alternatives to Chemical Treatments
 Slug: natural-teeth-whitening-safe-alternatives-chemical-treatments
 Publish Date: March 5, 2024
-Image Prompt: Natural teeth whitening ingredients like baking soda, coconut oil, and strawberries arranged artistically on marble surface
+Image Path: /blog_images/natural-teeth-whitening-safe-alternatives-to-chemical-treatments.png
 Tags: natural teeth whitening, chemical-free whitening, safe teeth whitening, natural oral care, tooth whitening alternatives, organic dental care, DIY teeth whitening, sustainable oral health, natural dental remedies, eco-friendly whitening
 
 Meta Description: Discover safe, natural teeth whitening methods that work without harsh chemicals. Gentle alternatives for a brighter smile using sustainable ingredients.
@@ -796,7 +796,7 @@ BLOG POST #9
 Title: Building a Sustainable Morning Routine: Eco-Friendly Start to Your Day
 Slug: sustainable-morning-routine-eco-friendly-daily-habits
 Publish Date: March 12, 2024
-Image Prompt: Peaceful morning bathroom scene with sustainable products, natural lighting, plants, and eco-friendly items arranged mindfully
+Image Path: /blog_images/building-a-sustainable-morning-routine-eco-friendly-start-to-your-day.png
 Tags: sustainable morning routine, eco-friendly habits, green living, sustainable lifestyle, environmental consciousness, morning rituals, zero waste living, sustainable self-care, eco-conscious living, green routine
 
 Meta Description: Transform your morning routine with sustainable practices that reduce environmental impact while improving your wellbeing. Complete eco-friendly guide.
@@ -954,7 +954,7 @@ BLOG POST #10
 Title: The Hidden Environmental Impact of Conventional Toothpaste Tubes
 Slug: environmental-impact-conventional-toothpaste-tubes
 Publish Date: March 19, 2024
-Image Prompt: Cross-section diagram of toothpaste tube showing multiple material layers with environmental impact icons around it
+Image Path: /blog_images/the-hidden-environmental-impact-of-conventional-toothpaste-tubes.png
 Tags: toothpaste packaging, environmental impact, packaging waste, sustainable oral care, plastic pollution, toothpaste tubes, eco-friendly packaging, sustainable packaging, waste reduction, green oral care
 
 Meta Description: Discover the shocking environmental cost of toothpaste tube packaging and learn about sustainable alternatives that eliminate waste entirely.

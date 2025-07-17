@@ -88,8 +88,12 @@ function parseBlogPost(content: string): BlogPost | null {
   let tags: string[] = [];
   let metaDescription = '';
   let postContent = '';
+  const externalLinks: string[] = [];
+  const internalLinks: string[] = [];
   
   let contentStart = false;
+  let inExternalLinksSection = false;
+  let inInternalLinksSection = false;
   
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i].trim();
@@ -110,11 +114,69 @@ function parseBlogPost(content: string): BlogPost | null {
     } else if (line === '' && metaDescription && !contentStart) {
       contentStart = true;
     } else if (contentStart) {
-      postContent += line + '\n';
+      // Stop parsing content when we hit meta sections that shouldn't be displayed
+      if (line.includes('[Due to space constraints,') || 
+          line.includes('External Sources Referenced Throughout:') ||
+          line.includes('Internal Links Throughout:') ||
+          line.includes('This completes the foundation for')) {
+        break;
+      }
+      
+      // Handle External Links section
+      if (line.startsWith('External Links:')) {
+        inExternalLinksSection = true;
+        inInternalLinksSection = false;
+        continue;
+      }
+      
+      // Handle Internal Links section
+      if (line.startsWith('Internal Links:')) {
+        inInternalLinksSection = true;
+        inExternalLinksSection = false;
+        continue;
+      }
+      
+      // Reset sections when we hit an empty line after links
+      if (line === '' && (inExternalLinksSection || inInternalLinksSection)) {
+        inExternalLinksSection = false;
+        inInternalLinksSection = false;
+        continue;
+      }
+      
+      // Process links in their respective sections
+      if (inExternalLinksSection && line.startsWith('-')) {
+        const linkText = line.replace(/^-\s*/, '').trim();
+        if (linkText) {
+          externalLinks.push(linkText);
+        }
+        continue;
+      }
+      
+      if (inInternalLinksSection && line.startsWith('-')) {
+        const linkText = line.replace(/^-\s*/, '').trim();
+        if (linkText) {
+          internalLinks.push(linkText);
+        }
+        continue;
+      }
+      
+      // Only add to content if we're not in a links section
+      if (!inExternalLinksSection && !inInternalLinksSection) {
+        postContent += line + '\n';
+      }
     }
   }
   
   // Clean up content
+  postContent = postContent.trim();
+  
+  // Additional cleanup: remove any remaining meta-content patterns
+  postContent = postContent.replace(/\[Due to space constraints,[\s\S]*$/m, '');
+  postContent = postContent.replace(/External Sources Referenced Throughout:[\s\S]*$/m, '');
+  postContent = postContent.replace(/Internal Links Throughout:[\s\S]*$/m, '');
+  postContent = postContent.replace(/This completes the foundation for[\s\S]*$/m, '');
+  
+  // Clean up any trailing whitespace after removals
   postContent = postContent.trim();
   
   // Validate required fields
@@ -130,8 +192,8 @@ function parseBlogPost(content: string): BlogPost | null {
     imagePath: imagePath ? imagePath.replace('/blog_images/', '/blogs/blog_images/') : '/favicon.png',
     tags,
     metaDescription: metaDescription || '',
-    externalLinks: [],
-    internalLinks: []
+    externalLinks,
+    internalLinks
   };
 }
 

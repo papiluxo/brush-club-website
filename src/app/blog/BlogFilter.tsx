@@ -91,11 +91,6 @@ export default function BlogFilter({ posts, tags }: BlogFilterProps) {
                   alt={post.title}
                   fill
                   className="object-cover"
-                  onError={(e) => {
-                    // Fallback to a placeholder image if the main image fails to load
-                    const target = e.target as HTMLImageElement;
-                    target.src = '/placeholder-blog-image.jpg';
-                  }}
                 />
               </div>
               <div className="p-6">

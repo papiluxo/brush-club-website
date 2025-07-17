@@ -76,7 +76,7 @@ export default function BlogPost({ params }: BlogPostPageProps) {
     return paragraphs.map((paragraph, index) => {
       paragraph = paragraph.trim();
       
-      // Handle headers
+      // Handle markdown headers
       if (paragraph.startsWith('## ')) {
         return (
           <h2 key={index} className="text-2xl font-bold text-slate-900 mt-8 mb-4">
@@ -93,24 +93,95 @@ export default function BlogPost({ params }: BlogPostPageProps) {
         );
       }
 
-      // Handle bold text
-      paragraph = paragraph.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      // Check if the entire paragraph is bold text (likely a subtitle)
+      const boldParagraphMatch = paragraph.match(/^\*\*(.+)\*\*$/);
+      if (boldParagraphMatch) {
+        return (
+          <h3 key={index} className="text-xl font-semibold text-slate-900 mt-6 mb-3">
+            {boldParagraphMatch[1]}
+          </h3>
+        );
+      }
+
+      // Check if paragraph starts with bold text followed by content (section header)
+      const boldStartMatch = paragraph.match(/^\*\*([^*]+)\*\*(.*)$/);
+      if (boldStartMatch) {
+        const [, boldText, remainingText] = boldStartMatch;
+        const hasSignificantContent = remainingText.trim().length > 20;
+        
+        if (!hasSignificantContent) {
+          // Treat as a subtitle if there's minimal content after the bold text
+          return (
+            <div key={index}>
+              <h3 className="text-xl font-semibold text-slate-900 mt-6 mb-3">
+                {boldText}
+              </h3>
+              {remainingText.trim() && (
+                <p className="text-slate-700 leading-relaxed mb-4">
+                  {remainingText.trim()}
+                </p>
+              )}
+            </div>
+          );
+        }
+      }
+
+      // Handle lists
+      if (paragraph.includes('\n- ') || paragraph.startsWith('- ')) {
+        const listItems = paragraph.split('\n').filter(line => line.trim().startsWith('- '));
+        if (listItems.length > 0) {
+          return (
+            <ul key={index} className="list-disc list-inside space-y-2 mb-4 text-slate-700">
+              {listItems.map((item, itemIndex) => (
+                <li key={itemIndex} className="leading-relaxed">
+                  {item.replace(/^- /, '').trim()}
+                </li>
+              ))}
+            </ul>
+          );
+        }
+      }
+
+      // Handle numbered lists
+      if (paragraph.includes('\n1. ') || /^\d+\. /.test(paragraph)) {
+        const listItems = paragraph.split('\n').filter(line => /^\d+\. /.test(line.trim()));
+        if (listItems.length > 0) {
+          return (
+            <ol key={index} className="list-decimal list-inside space-y-2 mb-4 text-slate-700">
+              {listItems.map((item, itemIndex) => (
+                <li key={itemIndex} className="leading-relaxed">
+                  {item.replace(/^\d+\. /, '').trim()}
+                </li>
+              ))}
+            </ol>
+          );
+        }
+      }
+
+      // Handle regular paragraphs with inline formatting
+      let formattedParagraph = paragraph;
+      
+      // Handle bold text (inline, not at paragraph start)
+      formattedParagraph = formattedParagraph.replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-slate-900">$1</strong>');
+      
+      // Handle italic text
+      formattedParagraph = formattedParagraph.replace(/\*(.*?)\*/g, '<em class="italic">$1</em>');
       
       // Handle internal links
-      paragraph = paragraph.replace(/\[([^\]]+)\]\(\/([^)]+)\)/g, 
-        '<a href="/$2" class="text-emerald-600 hover:text-emerald-700 font-medium">$1</a>'
+      formattedParagraph = formattedParagraph.replace(/\[([^\]]+)\]\(\/([^)]+)\)/g, 
+        '<a href="/$2" class="text-emerald-600 hover:text-emerald-700 font-medium underline">$1</a>'
       );
       
       // Handle external links
-      paragraph = paragraph.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, 
-        '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:text-emerald-700 font-medium">$1</a>'
+      formattedParagraph = formattedParagraph.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, 
+        '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:text-emerald-700 font-medium underline">$1</a>'
       );
       
       return (
         <p 
           key={index} 
           className="text-slate-700 leading-relaxed mb-4"
-          dangerouslySetInnerHTML={{ __html: paragraph }}
+          dangerouslySetInnerHTML={{ __html: formattedParagraph }}
         />
       );
     });
@@ -167,10 +238,6 @@ export default function BlogPost({ params }: BlogPostPageProps) {
               fill
               className="object-cover"
               priority
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.src = '/favicon.png';
-              }}
             />
           </div>
         </header>
@@ -189,39 +256,73 @@ export default function BlogPost({ params }: BlogPostPageProps) {
         {/* Links Section */}
         {(post.externalLinks.length > 0 || post.internalLinks.length > 0) && (
           <div className="mt-12 pt-8 border-t border-slate-200">
-            <h3 className="text-xl font-semibold text-slate-900 mb-6">Additional Resources</h3>
-            
             <div className="grid md:grid-cols-2 gap-8">
               {post.externalLinks.length > 0 && (
                 <div>
-                  <h4 className="font-medium text-slate-900 mb-3">External Links</h4>
-                  <ul className="space-y-2">
-                    {post.externalLinks.map((link, index) => (
-                      <li key={index} className="text-slate-600">
-                        <span dangerouslySetInnerHTML={{ 
-                          __html: link.replace(/\[([^\]]+)\]\(([^)]+)\)/g, 
-                            '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:text-emerald-700">$1</a>'
-                          )
-                        }} />
-                      </li>
-                    ))}
+                  <h4 className="font-semibold text-slate-900 mb-4 text-lg">Sources</h4>
+                  <ul className="space-y-3">
+                    {post.externalLinks.map((link, index) => {
+                      // Parse markdown-style links
+                      const linkMatch = link.match(/\[([^\]]+)\]\(([^)]+)\)/);
+                      if (linkMatch) {
+                        const [, linkText, url] = linkMatch;
+                        return (
+                          <li key={index} className="flex items-start">
+                            <span className="text-slate-400 mr-2 mt-1">•</span>
+                            <a
+                              href={url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-emerald-600 hover:text-emerald-700 hover:underline transition-colors"
+                            >
+                              {linkText}
+                            </a>
+                          </li>
+                        );
+                      } else {
+                        // If it's not a markdown link, display as plain text
+                        return (
+                          <li key={index} className="flex items-start">
+                            <span className="text-slate-400 mr-2 mt-1">•</span>
+                            <span className="text-slate-600">{link}</span>
+                          </li>
+                        );
+                      }
+                    })}
                   </ul>
                 </div>
               )}
               
               {post.internalLinks.length > 0 && (
                 <div>
-                  <h4 className="font-medium text-slate-900 mb-3">Related Articles</h4>
-                  <ul className="space-y-2">
-                    {post.internalLinks.map((link, index) => (
-                      <li key={index} className="text-slate-600">
-                        <span dangerouslySetInnerHTML={{ 
-                          __html: link.replace(/\[([^\]]+)\]\(([^)]+)\)/g, 
-                            '<a href="$2" class="text-emerald-600 hover:text-emerald-700">$1</a>'
-                          )
-                        }} />
-                      </li>
-                    ))}
+                  <h4 className="font-semibold text-slate-900 mb-4 text-lg">Related Articles</h4>
+                  <ul className="space-y-3">
+                    {post.internalLinks.map((link, index) => {
+                      // Parse markdown-style links
+                      const linkMatch = link.match(/\[([^\]]+)\]\(([^)]+)\)/);
+                      if (linkMatch) {
+                        const [, linkText, url] = linkMatch;
+                        return (
+                          <li key={index} className="flex items-start">
+                            <span className="text-slate-400 mr-2 mt-1">•</span>
+                            <Link
+                              href={url}
+                              className="text-emerald-600 hover:text-emerald-700 hover:underline transition-colors"
+                            >
+                              {linkText}
+                            </Link>
+                          </li>
+                        );
+                      } else {
+                        // If it's not a markdown link, display as plain text
+                        return (
+                          <li key={index} className="flex items-start">
+                            <span className="text-slate-400 mr-2 mt-1">•</span>
+                            <span className="text-slate-600">{link}</span>
+                          </li>
+                        );
+                      }
+                    })}
                   </ul>
                 </div>
               )}

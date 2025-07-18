@@ -6,13 +6,24 @@ export const getStripe = () => {
   return loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
 }
 
-// Server-side Stripe
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2025-06-30.basil',
-})
+// Server-side Stripe - lazy initialization
+let stripeInstance: Stripe | null = null
+
+export const getStripeServer = () => {
+  if (!stripeInstance) {
+    if (!process.env.STRIPE_SECRET_KEY) {
+      throw new Error('STRIPE_SECRET_KEY is not configured')
+    }
+    stripeInstance = new Stripe(process.env.STRIPE_SECRET_KEY, {
+      apiVersion: '2025-06-30.basil',
+    })
+  }
+  return stripeInstance
+}
 
 export async function createCheckoutSession(priceId: string, quantity: number = 1) {
   try {
+    const stripe = getStripeServer()
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: [
@@ -39,6 +50,7 @@ export async function createCheckoutSession(priceId: string, quantity: number = 
 
 export async function getCheckoutSession(sessionId: string) {
   try {
+    const stripe = getStripeServer()
     const session = await stripe.checkout.sessions.retrieve(sessionId)
     return session
   } catch (error) {

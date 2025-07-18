@@ -31,4 +31,16 @@ export interface SocialLink {
 export interface CheckoutSession {
   id: string;
   url: string;
+}
+
+export interface ShippingData {
+  name: string;
+  email: string;
+  phone: string;
+  street: string;
+  apartment: string;
+  city: string;
+  state: string;
+  zip: string;
+  country: string;
 } 

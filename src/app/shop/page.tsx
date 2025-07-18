@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { PRODUCT_DATA } from "@/lib/constants";
 import { formatPrice } from "@/lib/utils";
-import { CheckoutButton } from "@/components/CheckoutButton";
+import { CheckoutForm } from "@/components/CheckoutForm";
 
 export default function ShopPage() {
   return (
@@ -68,9 +68,9 @@ export default function ShopPage() {
                 </ul>
               </div>
 
-              {/* Buy Now Button */}
-              <div className="pt-6 border-t border-slate-200">
-                <CheckoutButton />
+              {/* Order Form */}
+              <div id="order-section" className="pt-6 border-t border-slate-200">
+                <CheckoutForm />
               </div>
             </div>
           </div>
@@ -195,9 +195,13 @@ export default function ShopPage() {
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Make the switch to eco-friendly dental care today. Your teeth and the planet will thank you.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch">
-            <div className="flex-1 max-w-xs">
-              <CheckoutButton />
+          <div className="flex justify-center">
+            <div className="w-full max-w-md">
+              <Link href="#order-section" className="block">
+                <Button variant="primary" size="lg" className="w-full">
+                  Order Now
+                </Button>
+              </Link>
             </div>
             <div className="flex-1 max-w-xs">
               <Link href="/about" className="block">

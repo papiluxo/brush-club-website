@@ -1,99 +1,91 @@
 # Brush Club - Sustainable E-Commerce Website
 
-A modern, responsive e-commerce platform built with Next.js 14, showcasing sustainable dental care products with a focus on environmental responsibility and user experience.
+A modern e-commerce platform built with Next.js 14 for a sustainable dental care company. This project showcases a full-stack implementation with integrated payments and a focus on performance and user experience.
 
-## 🌟 Project Overview
+## Project Overview
 
-This is a full-stack e-commerce website for Brush Club, featuring a clean, mobile-first design and integrated payment processing. The site emphasizes sustainability in both its messaging and technical implementation.
+Built this as a complete e-commerce solution for Brush Club, focusing on clean design and sustainable messaging. The site handles everything from product showcase to payment processing, with a mobile-first responsive design.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Framework**: Next.js 14 with App Router
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Payments**: Stripe Integration
 - **Deployment**: Vercel
-- **Performance**: Optimized images, lazy loading, and SEO
+- **Performance**: Image optimization, lazy loading, SEO
 
-## ✨ Key Features
+## Key Features
 
 ### Frontend
-- **Responsive Design**: Mobile-first approach with seamless desktop experience
-- **Modern UI/UX**: Clean, accessible interface with smooth animations
-- **Performance Optimized**: Fast loading times and efficient resource usage
-- **SEO Optimized**: Comprehensive meta tags, sitemap, and structured data
+- Responsive design with mobile-first approach
+- Clean, accessible interface with smooth animations
+- Optimized loading times and resource usage
+- Comprehensive SEO implementation
 
 ### E-Commerce
-- **Secure Payments**: Integrated Stripe checkout flow
-- **Product Showcase**: Dynamic product displays with rich media
-- **Real-time Updates**: Live countdown timers and dynamic content
-- **Conversion Focused**: Optimized checkout experience
+- Integrated Stripe checkout flow
+- Dynamic product displays with rich media
+- Real-time countdown timers
+- Optimized conversion funnel
 
 ### Content Management
-- **Blog System**: Dynamic blog with SEO-optimized articles
-- **FAQ Section**: Comprehensive customer support content
-- **About Pages**: Company story and mission content
+- Dynamic blog system with SEO optimization
+- FAQ section for customer support
+- Company story and mission pages
 
-## 🎨 Design System
+## Design System
 
 ### Visual Identity
-- **Primary Colors**: Emerald and teal (representing sustainability)
-- **Typography**: Inter font family for clean, modern readability
-- **Components**: Consistent button styles, cards, and form elements
+- Primary colors: Emerald and teal (sustainability theme)
+- Typography: Inter font family for readability
+- Consistent component styling and spacing
 
 ### User Experience
-- **Accessibility**: WCAG compliant with proper semantic HTML
-- **Mobile-First**: Optimized touch targets and responsive layouts
-- **Performance**: Sub-3s load times with optimized assets
+- WCAG accessibility compliance
+- Optimized touch targets for mobile
+- Sub-3 second load times
 
-## 📱 Pages & Features
+## Site Structure
 
-- **Homepage**: Hero section with product showcase and value propositions
-- **Shop**: Product details with integrated checkout
+- **Homepage**: Hero section with product showcase
+- **Shop**: Product details with checkout integration
 - **Blog**: SEO-optimized articles about sustainable dental care
 - **About**: Company mission and environmental impact
-- **FAQ**: Customer support and product information
+- **FAQ**: Customer support content
 - **Legal**: Privacy policy and terms
 
-## 🛠️ Technical Highlights
+## Technical Implementation
 
 ### Architecture
-- **App Router**: Utilizing Next.js 14's latest routing capabilities
-- **TypeScript**: Fully typed for better development experience
-- **Component Library**: Reusable UI components with consistent styling
+- Next.js 14 App Router for modern routing
+- Full TypeScript implementation
+- Reusable component library
 
 ### Performance
-- **Image Optimization**: Next.js automatic image optimization
-- **Code Splitting**: Automatic route-based code splitting
-- **SEO**: Dynamic meta tags and structured data
+- Next.js automatic image optimization
+- Route-based code splitting
+- Dynamic meta tags and structured data
 
 ### Integrations
-- **Payment Processing**: Secure Stripe integration
-- **Analytics Ready**: Prepared for analytics integration
-- **Email Ready**: Contact form and newsletter capabilities
+- Secure Stripe payment processing
+- Ready for analytics integration
+- Contact form capabilities
 
-## 🌱 Sustainability Focus
+## Development Notes
 
-The project reflects Brush Club's commitment to environmental responsibility:
-- **Eco-friendly Messaging**: Content focused on sustainable practices
-- **Performance Efficiency**: Optimized code for reduced server load
-- **Conscious Design**: Minimal, purposeful interface design
+This project emphasizes sustainable practices both in content and implementation:
+- Eco-friendly messaging throughout
+- Performance-optimized code for reduced server load
+- Minimal, purposeful design choices
 
-## 📊 Project Stats
+## Project Stats
 
-- **Pages**: 8+ optimized pages
-- **Components**: 15+ reusable React components
-- **Performance**: 90+ Lighthouse scores
-- **Mobile Responsive**: 100% mobile-optimized
+- 8+ optimized pages
+- 15+ reusable React components
+- 90+ Lighthouse performance scores
+- 100% mobile responsive
 
-## 🔗 Live Demo
+## License
 
-Visit the live site to see the project in action: [Brush Club Website](https://brushclub.us)
-
-## 📄 License
-
-This project showcases modern web development practices and is presented as a portfolio piece. All rights reserved.
-
----
-
-*Built with ❤️ for a sustainable future* 🌱
+All rights reserved.

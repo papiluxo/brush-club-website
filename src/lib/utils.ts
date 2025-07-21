@@ -1,9 +1,22 @@
-import { type ClassValue } from "clsx"
-import clsx from "clsx"
+import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
+}
+
+// Utility to fetch checkout session data for user identification
+export async function getCheckoutSessionData(sessionId: string) {
+  try {
+    const response = await fetch(`/api/checkout-session?session_id=${sessionId}`);
+    if (!response.ok) {
+      throw new Error('Failed to fetch checkout session');
+    }
+    return await response.json();
+  } catch (error) {
+    console.error('Error fetching checkout session:', error);
+    return null;
+  }
 }
 
 export function formatPrice(price: number): string {

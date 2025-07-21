@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { SITE_CONFIG } from "@/lib/constants";
+import LogRocketComponent from "@/components/LogRocket";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -48,9 +49,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script src="https://cdn.lgrckt-in.com/LogRocket.min.js" crossOrigin="anonymous"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `window.LogRocket && window.LogRocket.init('0aoeka/brush-club');`
+        }} />
+      </head>
       <body
         className={`${inter.variable} font-sans antialiased min-h-screen flex flex-col`}
       >
+        <LogRocketComponent />
         <Navigation />
         <main className="flex-1">
           {children}

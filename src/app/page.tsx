@@ -80,7 +80,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold text-slate-900">Eco-Friendly Materials</h3>
               <p className="text-slate-600">
                 Bamboo toothbrushes and corn fiber floss that biodegrade naturally, 
-                reducing plastic waste by 90%.
+                reducing plastic waste by 96%.
               </p>
             </div>
 
@@ -115,8 +115,108 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Countdown Section */}
+      {/* Comparison Section */}
       <section className="py-16 lg:py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-8 mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+              The Clear Winner in Sustainable Dental Care
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              Compare plastic usage across different toothbrush options. Our bamboo toothbrushes 
+              deliver the lowest environmental impact while maintaining premium quality.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Traditional Toothbrush */}
+            <div className="bg-white rounded-xl p-8 shadow-lg border-2 border-red-200">
+              <div className="text-center space-y-4">
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto">
+                  <svg className="w-8 h-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-slate-900">Traditional Plastic</h3>
+                <div className="space-y-2">
+                  <div className="text-3xl font-bold text-red-600">10g+</div>
+                  <div className="text-sm text-slate-600">plastic per toothbrush</div>
+                </div>
+                <ul className="text-sm text-slate-600 space-y-2 text-left">
+                  <li>• Non-biodegradable plastic handle</li>
+                  <li>• Synthetic bristles</li>
+                  <li>• Takes 400+ years to decompose</li>
+                  <li>• Contributes to ocean plastic</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Alternative Options */}
+            <div className="bg-white rounded-xl p-8 shadow-lg border-2 border-yellow-200">
+              <div className="text-center space-y-4">
+                <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto">
+                  <svg className="w-8 h-8 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-slate-900">Other "Eco" Options</h3>
+                <div className="space-y-2">
+                  <div className="text-3xl font-bold text-yellow-600">2-5g</div>
+                  <div className="text-sm text-slate-600">plastic per toothbrush</div>
+                </div>
+                <ul className="text-sm text-slate-600 space-y-2 text-left">
+                  <li>• Still contains plastic components</li>
+                  <li>• Mixed materials complicate recycling</li>
+                  <li>• Often more expensive</li>
+                  <li>• Inconsistent quality standards</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Brush Club Solution */}
+            <div className="bg-white rounded-xl p-8 shadow-lg border-2 border-emerald-200 relative">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <span className="bg-emerald-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  BEST CHOICE
+                </span>
+              </div>
+              <div className="text-center space-y-4">
+                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto">
+                  <svg className="w-8 h-8 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-slate-900">Brush Club Bamboo</h3>
+                <div className="space-y-2">
+                  <div className="text-3xl font-bold text-emerald-600">0.4g</div>
+                  <div className="text-sm text-slate-600">plastic per toothbrush</div>
+                  <div className="text-sm font-semibold text-emerald-700">96% reduction</div>
+                </div>
+                <ul className="text-sm text-slate-600 space-y-2 text-left">
+                  <li>• 100% biodegradable bamboo handle</li>
+                  <li>• Carbon-infused soft bristles</li>
+                  <li>• PFAS-free materials</li>
+                  <li>• Premium quality guaranteed</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <div className="bg-emerald-50 rounded-xl p-6 inline-block">
+              <p className="text-emerald-800 font-semibold text-lg">
+                🌱 Choose Brush Club and eliminate <span className="font-bold">9.6g of plastic waste</span> per toothbrush
+              </p>
+              <p className="text-emerald-700 text-sm mt-2">
+                With 4 billion toothbrushes discarded annually, every switch makes a difference.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Countdown Section */}
+      <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <CountdownSection />
         </div>

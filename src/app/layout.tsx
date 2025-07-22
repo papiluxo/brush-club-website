@@ -50,15 +50,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <script src="https://cdn.lgrckt-in.com/LogRocket.min.js" crossOrigin="anonymous"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `window.LogRocket && window.LogRocket.init('0aoeka/brush-club');`
-        }} />
-      </head>
       <body
         className={`${inter.variable} font-sans antialiased min-h-screen flex flex-col`}
       >
+        <Script 
+          src="https://cdn.lgrckt-in.com/LogRocket.min.js" 
+          strategy="afterInteractive"
+        />
+        <Script 
+          id="logrocket-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `window.LogRocket && window.LogRocket.init('0aoeka/brush-club');`
+          }}
+        />
         <LogRocketComponent />
         <Navigation />
         <main className="flex-1">

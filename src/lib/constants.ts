@@ -33,8 +33,7 @@ export const NAVIGATION_ITEMS: NavItem[] = [
   { label: 'Home', href: '/' },
   { label: 'Shop', href: '/shop' },
   { label: 'Blog', href: '/blog' },
-  { label: 'About', href: '/about' },
-  { label: 'FAQ', href: '/faq' }
+  { label: 'About', href: '/about' }
 ]
 
 export const FOOTER_LINKS: NavItem[] = [

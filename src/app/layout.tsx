@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { SITE_CONFIG } from "@/lib/constants";
-import LogRocketComponent from "@/components/LogRocket";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -53,18 +51,6 @@ export default function RootLayout({
       <body
         className={`${inter.variable} font-sans antialiased min-h-screen flex flex-col`}
       >
-        <Script 
-          src="https://cdn.lgrckt-in.com/LogRocket.min.js" 
-          strategy="afterInteractive"
-        />
-        <Script 
-          id="logrocket-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `window.LogRocket && window.LogRocket.init('0aoeka/brush-club');`
-          }}
-        />
-        <LogRocketComponent />
         <Navigation />
         <main className="flex-1">
           {children}

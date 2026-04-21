@@ -5,7 +5,6 @@ import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
 import { COMPANY_INFO } from '@/lib/constants'
-import LogRocketComponent from '@/components/LogRocket'
 import { getCheckoutSessionData } from '@/lib/utils'
 
 interface UserInfo {
@@ -23,7 +22,6 @@ export default function SuccessPage() {
 
   useEffect(() => {
     if (sessionId) {
-      // Fetch checkout session data and identify user with LogRocket
       getCheckoutSessionData(sessionId).then((data) => {
         if (data?.userInfo) {
           setUserInfo(data.userInfo)
@@ -34,9 +32,6 @@ export default function SuccessPage() {
 
   return (
     <>
-      {/* LogRocket with user identification */}
-      <LogRocketComponent userInfo={userInfo || undefined} />
-      
       <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8 text-center">
           <div className="space-y-6">

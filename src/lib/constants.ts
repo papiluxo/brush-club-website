@@ -38,6 +38,7 @@ export const NAVIGATION_ITEMS: NavItem[] = [
 
 export const FOOTER_LINKS: NavItem[] = [
   { label: 'About Brush Club', href: '/about' },
+  { label: 'Wholesale', href: '/wholesale' },
   { label: 'Blog', href: '/blog' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Privacy Policy', href: '/privacy' },

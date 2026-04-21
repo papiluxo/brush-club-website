@@ -32,6 +32,7 @@ export const PRODUCT_DATA: Product = {
 export const NAVIGATION_ITEMS: NavItem[] = [
   { label: 'Home', href: '/' },
   { label: 'Shop', href: '/shop' },
+  { label: 'Wholesale', href: '/wholesale' },
   { label: 'Blog', href: '/blog' },
   { label: 'About', href: '/about' }
 ]

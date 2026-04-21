@@ -159,13 +159,13 @@ export default function WholesalePage() {
             Start with a free sample
           </h2>
           <p className="text-lg text-slate-600">
-            Send me your property address and I'll ship one kit in the mail tomorrow.
+            Send us your property address and we'll ship one kit in the mail tomorrow.
             Touch it, try it, decide from there.
           </p>
           <div className="pt-4">
             <a href={SAMPLE_MAILTO}>
               <Button variant="primary" size="lg" className="min-w-[260px]">
-                Email Santi for a sample
+                Email us for a sample
               </Button>
             </a>
           </div>

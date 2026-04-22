@@ -10,47 +10,16 @@ export const metadata: Metadata = {
 };
 
 const TIERS = [
-  {
-    name: "Starter",
-    perKit: "$12/kit",
-    note: "20+ kit minimum",
-    features: [
-      "Free US shipping",
-      "48-hour dispatch from Miami",
-      "Net 15 on request",
-      "Single shipment",
-    ],
-  },
-  {
-    name: "Standard",
-    perKit: "$10/kit",
-    note: "50+ kit minimum",
-    features: [
-      "Everything in Starter",
-      "Net 15 payment terms as standard",
-      "Split shipments available (up to 2 drops)",
-      "Direct line to the founder for reorders + questions",
-    ],
-  },
-  {
-    name: "Bulk",
-    perKit: "$10/kit",
-    note: "100+ kit minimum",
-    features: [
-      "Everything in Standard",
-      "Same-day dispatch on weekday orders",
-      "Net 30 payment terms",
-      "Co-branded welcome card insert with your property name (no extra cost)",
-      "Optional quarterly auto-replenishment at locked pricing",
-    ],
-  },
+  { name: "Starter", perKit: "$15/kit", note: "20+ kit minimum" },
+  { name: "Standard", perKit: "$12/kit", note: "50+ kit minimum" },
+  { name: "Bulk", perKit: "$10/kit", note: "100+ kit minimum" },
 ];
 
 const TARGETS = [
   { name: "Eco-lodges", desc: "Jungle, rainforest, beachfront. Anywhere a plastic toothbrush in the bathroom undermines the story you're already telling." },
   { name: "Glamping sites", desc: "A turnover amenity that fits the brand without blowing the margin on hotel-grade toiletries." },
   { name: "Yoga & wellness retreats", desc: "A welcome-kit or farewell-gift detail guests actually mention in reviews." },
-  { name: "Eco-Airbnb hosts", desc: "One kit per stay, $10 per guest, no thought required." },
+  { name: "Eco-Airbnb hosts", desc: "One kit per stay, no thought required." },
 ];
 
 const KIT_CONTENTS = [
@@ -170,16 +139,6 @@ export default function WholesalePage() {
                 <h3 className="text-xl font-semibold text-slate-900">{t.name}</h3>
                 <p className="text-3xl font-bold text-emerald-600 mt-2">{t.perKit}</p>
                 <p className="text-sm text-slate-500 mt-1">{t.note}</p>
-                <ul className="mt-6 space-y-2 text-sm text-slate-600">
-                  {t.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2">
-                      <svg className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span>{f}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
             ))}
           </div>

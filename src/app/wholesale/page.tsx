@@ -6,8 +6,14 @@ import { PRODUCT_DATA } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Wholesale — Brush Club for Eco-Hospitality",
   description:
-    "Bamboo dental kits for boutique eco-lodges, glamping sites, yoga retreats, and eco-Airbnb hosts. $10/kit wholesale, 20-kit minimum, free US shipping.",
+    "Bamboo dental kits for boutique eco-lodges, glamping sites, yoga retreats, and eco-Airbnb hosts. Wholesale from $10/kit, free US shipping.",
 };
+
+const TIERS = [
+  { name: "Starter", min: 20, perKit: "$12/kit", note: "20+ kit minimum" },
+  { name: "Standard", min: 50, perKit: "$10/kit", note: "50+ kit minimum" },
+  { name: "Bulk", min: 100, perKit: "$10/kit + priority ship", note: "100+ kit minimum" },
+];
 
 const TARGETS = [
   { name: "Eco-lodges", desc: "Jungle, rainforest, beachfront. Anywhere a plastic toothbrush in the bathroom undermines the story you're already telling." },
@@ -41,8 +47,8 @@ export default function WholesalePage() {
           </h1>
           <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
             Bamboo toothbrushes and corn-fiber floss, PFAS-free and minimally packaged.
-            Wholesale at <span className="font-semibold text-slate-900">$10/kit</span>,
-            20-kit minimum, free US shipping.
+            Wholesale from <span className="font-semibold text-slate-900">$10/kit</span>,
+            free US shipping.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
             <a href={SAMPLE_MAILTO}>
@@ -110,38 +116,39 @@ export default function WholesalePage() {
 
       {/* Pricing */}
       <section id="pricing" className="py-16 lg:py-24">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-3 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Wholesale pricing</h2>
-            <p className="text-lg text-slate-600">One simple rate. Free US shipping on every order.</p>
+            <p className="text-lg text-slate-600">Simple tiers. Free US shipping on every order.</p>
           </div>
-          <div className="rounded-2xl p-10 bg-white border-2 border-emerald-500 shadow-md text-center">
-            <p className="text-5xl font-bold text-emerald-600">$10</p>
-            <p className="text-lg text-slate-700 mt-2">per kit</p>
-            <p className="text-sm text-slate-500 mt-1">20-kit minimum order</p>
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-slate-600">
-              <div className="flex items-center justify-center gap-2">
-                <svg className="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                Free US shipping
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {TIERS.map((t, i) => (
+              <div
+                key={t.name}
+                className={`rounded-2xl p-8 bg-white ${
+                  i === 1
+                    ? "border-2 border-emerald-500 shadow-md relative"
+                    : "border border-slate-200"
+                }`}
+              >
+                {i === 1 && (
+                  <p className="absolute top-0 right-0 transform translate-x-2 -translate-y-3 bg-emerald-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    Most common
+                  </p>
+                )}
+                <h3 className="text-xl font-semibold text-slate-900">{t.name}</h3>
+                <p className="text-3xl font-bold text-emerald-600 mt-2">{t.perKit}</p>
+                <p className="text-sm text-slate-500 mt-1">{t.note}</p>
+                <ul className="mt-6 space-y-2 text-sm text-slate-600">
+                  <li>Free US shipping</li>
+                  <li>48-hour dispatch</li>
+                  <li>Invoice payment (Net 15 on request)</li>
+                </ul>
               </div>
-              <div className="flex items-center justify-center gap-2">
-                <svg className="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                48-hour dispatch
-              </div>
-              <div className="flex items-center justify-center gap-2">
-                <svg className="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                Invoice payment (Net 15 on request)
-              </div>
-            </div>
+            ))}
           </div>
-          <p className="text-center text-sm text-slate-500 mt-6">
-            Larger orders or international shipping? Email for a quote.
+          <p className="text-center text-sm text-slate-500 mt-8">
+            International shipping available on request. Email for a quote.
           </p>
         </div>
       </section>

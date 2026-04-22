@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { PRODUCT_DATA } from "@/lib/constants";
@@ -7,20 +6,22 @@ import { PRODUCT_DATA } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Wholesale — Brush Club for Eco-Hospitality",
   description:
-    "Bamboo dental kits for boutique eco-lodges, glamping sites, yoga retreats, and eco-Airbnb hosts. $10/kit wholesale, free US shipping, ships in 48 hours.",
+    "Bamboo dental kits for boutique eco-lodges, glamping sites, yoga retreats, and eco-Airbnb hosts. $10/kit wholesale, 20-kit minimum, free US shipping.",
 };
 
-const TIERS = [
-  { name: "Starter", min: 20, price: 12, perKit: "$12/kit" },
-  { name: "Standard", min: 50, price: 10, perKit: "$10/kit" },
-  { name: "Bulk", min: 100, price: 10, perKit: "$10/kit + priority ship" },
+const TARGETS = [
+  { name: "Eco-lodges", desc: "Jungle, rainforest, beachfront. Anywhere a plastic toothbrush in the bathroom undermines the story you're already telling." },
+  { name: "Glamping sites", desc: "A turnover amenity that fits the brand without blowing the margin on hotel-grade toiletries." },
+  { name: "Yoga & wellness retreats", desc: "A welcome-kit or farewell-gift detail guests actually mention in reviews." },
+  { name: "Eco-Airbnb hosts", desc: "One kit per stay, $10 per guest, no thought required." },
 ];
 
-const TARGETS = [
-  { name: "Eco-lodges", desc: "Jungle, rainforest, beachfront — anywhere a plastic toothbrush in the bathroom undermines the story you're already telling." },
-  { name: "Glamping sites", desc: "Turnover amenity that fits the brand without blowing the margin on hotel-grade toiletries." },
-  { name: "Yoga & wellness retreats", desc: "Welcome-kit or farewell-gift detail guests actually mention in reviews." },
-  { name: "Eco-Airbnb hosts", desc: "One kit per stay, $10 per guest, no thought required." },
+const KIT_CONTENTS = [
+  "2 bamboo toothbrushes with soft, carbon-infused bristles",
+  "2 corn-fiber floss rolls",
+  "PFAS-free, biodegradable materials",
+  "Minimal, recyclable packaging",
+  "Ships in 48 hours from Miami, FL",
 ];
 
 const SAMPLE_MAILTO =
@@ -39,9 +40,9 @@ export default function WholesalePage() {
             Bamboo dental kits for properties that already made every other choice right.
           </h1>
           <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
-            A 6-month supply of bamboo toothbrushes and corn-fiber floss, PFAS-free and minimally packaged.
-            Wholesale from <span className="font-semibold text-slate-900">$10/kit</span>, 20-kit minimum,
-            free US shipping.
+            Bamboo toothbrushes and corn-fiber floss, PFAS-free and minimally packaged.
+            Wholesale at <span className="font-semibold text-slate-900">$10/kit</span>,
+            20-kit minimum, free US shipping.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
             <a href={SAMPLE_MAILTO}>
@@ -51,7 +52,7 @@ export default function WholesalePage() {
             </a>
             <a href="#pricing">
               <Button variant="secondary" size="lg" className="w-full sm:w-auto min-w-[220px]">
-                See wholesale pricing
+                See pricing
               </Button>
             </a>
           </div>
@@ -93,20 +94,14 @@ export default function WholesalePage() {
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900">What's in every kit</h2>
               <ul className="space-y-3">
-                {PRODUCT_DATA.features.map((f) => (
-                  <li key={f} className="flex items-start gap-3">
+                {KIT_CONTENTS.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-slate-700">{f}</span>
+                    <span className="text-slate-700">{item}</span>
                   </li>
                 ))}
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-slate-700">Ships in 48 hours from Miami, FL</span>
-                </li>
               </ul>
             </div>
           </div>
@@ -115,39 +110,38 @@ export default function WholesalePage() {
 
       {/* Pricing */}
       <section id="pricing" className="py-16 lg:py-24">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-3 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Wholesale pricing</h2>
-            <p className="text-lg text-slate-600">Simple tiers. No account needed. Free US shipping on every order.</p>
+            <p className="text-lg text-slate-600">One simple rate. Free US shipping on every order.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {TIERS.map((t, i) => (
-              <div
-                key={t.name}
-                className={`rounded-2xl p-8 bg-white ${
-                  i === 1
-                    ? "border-2 border-emerald-500 shadow-md relative"
-                    : "border border-slate-200"
-                }`}
-              >
-                {i === 1 && (
-                  <p className="absolute top-0 right-0 transform translate-x-2 -translate-y-3 bg-emerald-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                    Most common
-                  </p>
-                )}
-                <h3 className="text-xl font-semibold text-slate-900">{t.name}</h3>
-                <p className="text-3xl font-bold text-emerald-600 mt-2">{t.perKit}</p>
-                <p className="text-sm text-slate-500 mt-1">{t.min}+ kit minimum</p>
-                <ul className="mt-6 space-y-2 text-sm text-slate-600">
-                  <li>Free US shipping</li>
-                  <li>48-hour dispatch</li>
-                  <li>Invoice payment (Net 15 on request)</li>
-                </ul>
+          <div className="rounded-2xl p-10 bg-white border-2 border-emerald-500 shadow-md text-center">
+            <p className="text-5xl font-bold text-emerald-600">$10</p>
+            <p className="text-lg text-slate-700 mt-2">per kit</p>
+            <p className="text-sm text-slate-500 mt-1">20-kit minimum order</p>
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-slate-600">
+              <div className="flex items-center justify-center gap-2">
+                <svg className="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                Free US shipping
               </div>
-            ))}
+              <div className="flex items-center justify-center gap-2">
+                <svg className="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                48-hour dispatch
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <svg className="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                Invoice payment (Net 15 on request)
+              </div>
+            </div>
           </div>
-          <p className="text-center text-sm text-slate-500 mt-8">
-            International shipping available on request — email for a quote.
+          <p className="text-center text-sm text-slate-500 mt-6">
+            Larger orders or international shipping? Email for a quote.
           </p>
         </div>
       </section>

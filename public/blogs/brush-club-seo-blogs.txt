@@ -3745,3 +3745,96 @@ Internal Links:
 - [Shop Brush Club]( /shop)
 - [Wholesale for Hospitality]( /wholesale)
 
+
+==========================================
+BLOG POST #33
+==========================================
+
+Title: PFAS in Dental Floss: What's Still on Shelves and How to Avoid It
+Slug: pfas-in-dental-floss-what-to-avoid
+Publish Date: April 23, 2026
+Image Path: /blog_images/pfas-in-dental-floss-what-to-avoid.jpg
+Tags: pfas, dental floss, oral health, toxic chemicals, eco-friendly dental, forever chemicals, fluoride-free, sustainable oral care, teflon floss, ptfe floss
+
+Meta Description: PFAS chemicals still show up in some dental floss. Here's what the research says, which products to watch out for, and how to find safer alternatives.
+
+If you floss every day and feel quietly virtuous about it, I hate to be the one to complicate that. Research suggests that certain dental flosses — including some well-known brands — contain PFAS, the class of synthetic chemicals linked to hormone disruption, immune dysfunction, and a growing list of health concerns. The good news is that avoiding them is pretty simple once you know what to look for.
+
+## What PFAS Actually Are
+
+PFAS stands for per- and polyfluoroalkyl substances. There are thousands of compounds in this family, and they share one defining trait: they don't break down. In the environment or in your body, they just accumulate. That's why they've earned the nickname "forever chemicals."
+
+The EPA has been tightening regulations around PFAS in drinking water and industrial discharge, and the science connecting PFAS exposure to health outcomes keeps growing. What most people don't realize is that the exposure pathway isn't only contaminated groundwater or nonstick cookware. It can be something as ordinary as the floss you drag between your teeth twice a day.
+
+## How PFAS Ends Up in Dental Floss
+
+The main culprit is PTFE, or polytetrafluoroethylene. You probably know it better as Teflon. PTFE is used in some flosses because it glides between tight teeth more easily than nylon. That smooth, silky texture you get with certain waxed or "glide"-style flosses? Often that's PTFE doing the work.
+
+PTFE itself is a fluoropolymer and sits in a gray area — it's technically distinct from the "short-chain" PFAS that regulators have focused on most aggressively. But the problem is that PTFE manufacturing involves other PFAS compounds, and finished products can carry residual contamination. A 2019 study published in the Journal of Exposure Science and Environmental Epidemiology found higher blood PFAS levels in women who reported using certain PTFE-based flosses. That's a correlation, not a guarantee of causation, but it's enough to take seriously.
+
+Beyond PTFE, some flosses use fluorinated coatings to help the product slide or resist fraying. These coatings are less consistently disclosed on packaging, which is part of what makes this tricky for consumers.
+
+## Which Products to Watch
+
+I'm not going to name-and-shame specific brands here because formulations change and I can't verify what's on shelves this week versus six months ago. What I can tell you is what to look for on the label.
+
+Red flags include:
+
+- **"PTFE" listed as a material** — some brands disclose this, many don't
+- **"Glide" or ultra-smooth texture claims** — not always PTFE, but worth checking
+- **No material disclosure at all** — this is actually common and frustrating
+- **"Fluoride-coated" floss** — different from PFAS but a sign the manufacturer is adding chemical coatings
+
+Organizations like the Silent Spring Institute and Mamavation have done independent testing on household products including floss, and their findings have flagged several mainstream options. The Environmental Working Group also maintains consumer guides worth bookmarking. None of these are regulatory bodies, so treat their lists as starting points for your own research rather than final verdicts.
+
+One thing worth noting: the ADA Seal of Acceptance is about safety and efficacy for removing plaque, not about chemical ingredient transparency. A product can carry that seal and still contain PTFE. The seal is useful but not a complete proxy for what you might care about here.
+
+## Why This Matters More Than It Might Seem
+
+The mouth is not a sealed system. The tissue under your tongue and along your gums is highly permeable — it's actually one of the fastest absorption routes into the bloodstream, which is why certain medications are administered sublingually. When you floss, you're introducing whatever is on that floss directly against that tissue, often with a little friction to help things along.
+
+Nobody has run a definitive long-term clinical trial on PFAS absorption specifically from dental floss — the research is still catching up. But the precautionary logic is sound. If you can get the same plaque-removal benefit from a product that doesn't contain fluoropolymers, why not choose that one?
+
+Daily exposure matters here. We're not talking about touching a nonstick pan occasionally. Flossing is a routine, cumulative behavior. Small exposures repeated over years add up, and PFAS compounds don't clear your system quickly.
+
+## How to Find PFAS-Free Floss
+
+Here's where it actually gets easier. The market for cleaner floss has expanded a lot in the last few years. A few things to look for:
+
+**Nylon floss with no added coatings.** Plain nylon isn't glamorous, but it works, and it doesn't require fluoropolymers. Some people find it shreds more easily on tight contacts, but technique matters more than you'd think.
+
+**Silk floss.** Natural silk is genuinely effective and biodegradable. It's pricier and not vegan, but it's a legitimate option if those trade-offs work for you.
+
+**Plant-based or corn-based flosses.** These have grown in quality and availability. Look for brands that are transparent about their full ingredient list.
+
+**Floss with explicit "PTFE-free" or "PFAS-free" labeling.** Some brands have started calling this out directly. That's a good sign, though I'd still look for third-party verification where possible.
+
+At Brush Club, we went through this exact research process when we were sourcing floss for our kits, which is part of why I feel comfortable writing about it. The [shop](/shop) has options we've vetted for this specifically.
+
+If you're buying at a pharmacy or grocery store, read the label more carefully than you usually would. If the material isn't disclosed, that's not a regulatory violation — but it is a reason to look for a brand that tells you more.
+
+## A Quick Note on Flossing Itself
+
+Some people, after reading something like this, consider just stopping flossing. Please don't do that. Periodontal disease is a real problem, and the ADA is clear that interdental cleaning is important for gum health. The research on links between gum disease and systemic inflammation, including cardiovascular risk, is substantial. The answer isn't to quit flossing. It's to floss with something better.
+
+Waterpiks and interdental brushes are also solid alternatives if you genuinely struggle with traditional floss. They have their own evidence base and no PFAS concerns.
+
+## The Bigger Picture
+
+PFAS contamination is a systemic problem that runs through food packaging, cookware, clothing, firefighting foam, and drinking water. Switching your floss isn't going to eliminate your exposure. But consumer choices do collectively move markets, and choosing products made by companies willing to be transparent about their materials is a reasonable thing to do.
+
+The regulatory environment around PFAS is also shifting. The EPA finalized drinking water limits for several PFAS compounds in 2024, and there's ongoing pressure to expand testing and disclosure requirements to consumer products. That's slow-moving, though, and in the meantime the labeling on your floss probably isn't going to help you much.
+
+So read the ingredient list. Look for explicit PTFE-free claims. Check resources like the EWG's consumer guides. And if a product's materials are undisclosed and it feels suspiciously slippery, maybe put it back on the shelf.
+
+Your teeth need to last you a long time. The floss you use to take care of them probably shouldn't be working against you in the process.
+
+*Photo by [Marta Branco](https://www.pexels.com/@martabranco) on [Pexels](https://www.pexels.com).*
+
+External Links:
+- [EPA Environmental Data](https://www.epa.gov)
+
+Internal Links:
+- [Shop Brush Club]( /shop)
+- [Wholesale for Hospitality]( /wholesale)
+

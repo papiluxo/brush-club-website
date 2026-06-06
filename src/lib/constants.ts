@@ -61,6 +61,8 @@ export const COMPANY_INFO = {
 export const SITE_CONFIG = {
   title: 'Brush Club - Sustainable Dental Care',
   description: 'Climate-conscious dental care with our 6-month eco-friendly dental kit. Bamboo toothbrushes, corn fiber floss, and minimal packaging.',
-  url: 'https://brushclub.com',
+  // Live domain is brushclub.us. brushclub.com does NOT resolve — using it here
+  // pointed sitemap.xml + robots.txt + OG tags at a dead host (fixed Jun 2026).
+  url: 'https://brushclub.us',
   ogImage: '/product_media/dk_1.jpg'
 } 
